@@ -428,7 +428,16 @@ li p, .dd-postcontent li p, .dd-blockcontent li p
   height: auto;
 }
 
-.dd-object1701156306-text, .dd-object1701156306-text a.dd-rss-tag-icon, .dd-object1701156306-text a.dd-facebook-tag-icon, .dd-object1701156306-text a.dd-twitter-tag-icon, .dd-object1701156306-text a.dd-tumblr-tag-icon, .dd-object1701156306-text a.dd-pinterest-tag-icon, .dd-object1701156306-text a.dd-vimeo-tag-icon, .dd-object1701156306-text a.dd-youtube-tag-icon, .dd-object1701156306-text a.dd-linkedin-tag-icon, .dd-object1701156306-text a
+/*.dd-object1701156306-text, */
+.dd-object1701156306-text a.dd-rss-tag-icon, 
+.dd-object1701156306-text a.dd-facebook-tag-icon, 
+.dd-object1701156306-text a.dd-twitter-tag-icon, 
+.dd-object1701156306-text a.dd-tumblr-tag-icon, 
+.dd-object1701156306-text a.dd-pinterest-tag-icon, 
+.dd-object1701156306-text a.dd-vimeo-tag-icon, 
+.dd-object1701156306-text a.dd-youtube-tag-icon, 
+.dd-object1701156306-text a.dd-linkedin-tag-icon, 
+.dd-object1701156306-text a
 {
   font-size: 12px;
   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
@@ -436,6 +445,17 @@ li p, .dd-postcontent li p, .dd-blockcontent li p
   vertical-align: top;
  
   color: #1A1A1A !important;
+  text-decoration:none;
+  line-height: 1.3;
+}
+
+.dd-object1701156306-text {
+  font-size: 16px;
+  font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+  text-align: left;
+  vertical-align: top;
+ 
+  color: #eee !important;
   text-decoration:none;
   line-height: 1.3;
 }
