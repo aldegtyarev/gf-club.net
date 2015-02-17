@@ -1,0 +1,36 @@
+<install type="module" version="1.5.0">
+    <name>vk_widget</name>
+    <version>0.1</version>
+    <description>Выводит виджет группы Вконтакте</description>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <author>Alexey Degtyarev</author>
+    <authoremail>aldegtyarev@yandex.ru</authoremail>
+    <authorurl>http://gf-club.net</authorurl>
+    <copyright>Copyright (C) 2012 Alexey Degtayrev. All rights reserved.</copyright>
+    <creationDate>Aprile 2012</creationDate>
+    <files>
+		<filename module="mod_vk_widget">mod_vk_widget.php</filename>
+		<filename>mod_vk_widget.xml</filename>
+        <filename>helper.php</filename>
+        <filename>index.html</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>tmpl/index.html</filename>
+    </files>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">  
+                <field
+                    name="vk_url"
+                    type="text"
+                    label="Адрес группы Вконтакте"
+					size="50"
+                    description="Введите сюда URL Вашей группы Вконтакте" />
+                <field
+                    name="moduleclass_sfx"
+                    type="text"
+                    label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                    description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />                               
+            </fieldset> 
+        </fields>
+    </config>       	
+</install>

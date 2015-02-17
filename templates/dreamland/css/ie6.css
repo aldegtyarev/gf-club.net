@@ -1,0 +1,6 @@
+@charset "utf-8";
+/* CSS Document for PopPraise by JoomlaPraise © Copyright Apr 09 */
+.moduletable ul li, .moduletable_menu ul li, .moduletable_text ul li, .moduletable-ms1 ul li, .moduletable-ms2 ul li, .moduletable-ms3 ul li, .moduletable-ms4 ul li{
+display:inline;
+}
+

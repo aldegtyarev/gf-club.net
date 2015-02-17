@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<install version="2.5" type="template">
+	<name>dreamland</name>
+	<creationDate>19/06/09</creationDate>
+	<author>Joomlapanel</author>
+	<authorUrl>http://joomlapanel.com</authorUrl>
+	<description><![CDATA[<img src="../templates/dreamland/template_thumbnail.png" style="margin-right: 1em; float: left" /><p><strong>Joomla Version:</strong> 1.5x</p><p><strong>Title:</strong>DreamLand</p><p><strong>Date: </strong>Jun 2009</p><p><strong>Author: </strong><a href="http://joomlapanel.com" title="Joomla Web Showcase and Tutorial" target="_blank">JoomlaPanel</a></p><p><strong>Supported by:</strong>This Template supprted by : <a href="http://www.baliproject.com" title="WEB CMS PROJECT" target="_blank">Bali Web Project</a></p>
+<p>&nbsp;</p>
+]]></description>
+	<files>
+		<folder>css/</folder>
+		<folder>html/</folder>
+		<folder>js/</folder>
+		<folder>images/</folder>
+		<filename>favicon.ico</filename>
+		<filename>index.php</filename>
+		<filename>fields.ini</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>component.php</filename>
+		<filename>adfdfdfaewwe4edda.php</filename>
+		<filename>ytrkjaerffkkf.php</filename>
+		<filename>template_thumbnail.png</filename>
+  </files>
+  <positions>
+    <position>insert</position>
+    <position>right</position>
+    <position>login</position>
+    <position>advert1</position>
+    <position>advert2</position>
+	<position>advert3</position>
+	<position>advert4</position>
+    <position>banner5</position>
+    <position>banner6</position>
+    <position>banner7</position>
+    <position>banner8</position>
+    <position>banner9</position>
+    <position>breadcrumb</position>
+    <position>inset</position>
+    <position>user1</position>
+    <position>user2</position>
+    <position>top</position>
+    <position>menu</position>
+    <position>user5</position>
+    <position>user6</position>
+    <position>user7</position>
+    <position>user8</position>
+    <position>user9</position>
+	<position>user10</position>
+	<position>user11</position>
+	<position>user12</position>
+	<position>user13</position>
+	<position>user14</position>
+	<position>user15</position>
+    <position>debug</position>
+    <position>news_pos</position>
+  </positions>
+	<config>
+		<fields name="params">
+			<fieldset name="advanced">
+				<field name="customWidth" type="text" default="" label="Custom Width" description="Type a custom width for the template(example: 90% | 760px)" />
+				
+				<field name="switchSidebar" type="list" default="" label="Layout" description="Modules must be active in left and right module positions for setting to have an effect.">
+					<option value="">Left and Right Sidebar</option>
+					<option value="right">Right Sidebars</option>
+					<option value="left">Left Sidebars</option>
+				</field>
+				
+				<field name="fontFamily" type="list" default="" label="Font Family" description="Choose your font family">
+					<option value="arial">Arial, Helvetica, sans-serif</option>
+					<option value="times">"Times New Roman", Times, serif</option>
+					<option value="courier">"Courier New", Courier, monospace</option>
+					<option value="georgia">Georgia,"Times New Roman", Times, serif</option>
+				</field>
+				
+				<field name="defaultFontColor" type="text" default="" label="Custom Default Font Color" description="Type A Hexadecimal Color(#123456) for the font color(Do forget to include the pound(#) sign)" />
+				<field name="defaultLinkColor" type="text" default="" label="Custom Default Link Color" description="Type A Hexadecimal Color(#123456) for the links color(Do forget to include the pound(#) sign)" />
+				<field name="defaultLinkHoverColor" type="text" default="" label="Custom Default Link Hover Color" description="Type A Hexadecimal Color(#123456) for the link hover color(Do forget to include the pound(#) sign)" />
+				
+			</fieldset>
+		</fields>
+
+	</config>
+</install>

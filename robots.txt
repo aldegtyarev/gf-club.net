@@ -1,0 +1,103 @@
+User-agent: *
+Disallow: /administrator/
+Disallow: /cache/
+Disallow: /components/
+Disallow: /images/
+Disallow: /includes/
+Disallow: /installation/
+Disallow: /language/
+Disallow: /libraries/
+Disallow: /media/
+Disallow: /modules/
+Disallow: /plugins/
+Disallow: /templates/
+Disallow: /tmp/
+Disallow: /xmlrpc/
+Disallow: /index.php/component/user/reset
+Disallow: /index.php/component/user/remind
+Disallow: /index.php/component/user/register
+Disallow: /index.php?start
+Disallow: /index.php/web-links/*
+Disallow: /index.php/component/content/frontpage/
+Disallow: /index.php/home?
+Disallow: /index.php?option*
+
+Disallow: /forum/feed.php?f=7&t=37
+Disallow: /forum/*start*
+Disallow: /forum/*&p=*
+Disallow: /forum/download/file.php?id=*
+
+Disallow: /fotogallery/*
+
+Disallow: /component/content/frontpage.html
+Disallow: /component/joomgallery/*
+Disallow: /component/content/*
+
+Disallow: /index.php/articles/*
+Disallow: /index.php?limitstart*
+Disallow: /index.php?option=com_joomgallery*
+Disallow: /index.php?option=com_content*
+Disallow: /index.php/fotogallery/*
+Disallow: /index.php/component/content/*
+Disallow: */itemlist/tag/*
+Disallow: */component/k2/*
+Disallow: *image.raw*
+
+Disallow: */gomel-cup-2013/brik-fest*
+Disallow: */gomel-cup-2013/common*
+Disallow: */gomel-cup-2013/gomel-cup-2013*
+Disallow: */gomel-cup-2013/spring-plotva*
+
+Disallow: */gomel-cup-2013/feeder2008*
+Disallow: */gomel-cup-2013/kiev-2008*
+Disallow: */gomel-cup-2013/mogilev-2008*
+
+Disallow: */gomel-cup-2013/1-feeder-2009*
+Disallow: */gomel-cup-2013/iv-feeder-2009*
+Disallow: */gomel-cup-2013/friend-cup-2009*
+
+Disallow: */gomel-cup-2013/gomel-cup-2010*
+Disallow: */gomel-cup-2013/feeder2010-gomel*
+Disallow: */gomel-cup-2013/feeder2010-mogilyov*
+
+
+
+Disallow: */gomel-cup-2013/rutilus-cup-2011*
+Disallow: */gomel-cup-2013/feeder2011*
+Disallow: */gomel-cup-2013/gomel-feeder-2011*
+
+
+Disallow: */gomel-cup-2013/chigirinka2012*
+Disallow: */gomel-cup-2013/2fider2012*
+Disallow: */gomel-cup-2013/gomelcup2012*
+
+
+Disallow: */gomel-cup-2013/gomel-feeder*
+Disallow: */gomel-cup-2013/chigirinka*
+Disallow: */gomel-cup-2013/nashi-viezdi*
+Disallow: */gomel-cup-2013/gomel-cup*
+Disallow: */gomel-cup-2013/china*
+Disallow: */gomel-cup-2013/friend-cup*
+Disallow: */gomel-cup-2013/osen-festival*
+Disallow: */gomel-cup-2013/fotos-from-gor*
+Disallow: */gomel-cup-2013/strelkovoe*
+Disallow: */gomel-cup-2013/*fider2012*
+
+Disallow: */vesennyaya-plotva/plotva2012/gomel-cup-2013/*
+Disallow: */sorevs2008/sorevs2013.html
+
+Disallow: *?view=report*
+
+
+
+
+
+Disallow: */fishing-sport/itemlist*
+Disallow: *feed?limitstart=
+
+Disallow: */articles/poplavok*
+
+Disallow: */articles/1-latest-news.html
+Disallow: */web-links/51-fishing-resurses.feed?type=atom
+Disallow: */joomplu:992%20type=img
+Disallow: */Rules.files/colorschememapping.xm

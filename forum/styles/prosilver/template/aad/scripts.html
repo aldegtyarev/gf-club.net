@@ -1,0 +1,21 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$.ajax({
+			type: 'post',				
+			url: '/ajax.php',
+			data: 'getModules=1',
+			dataType: 'json',
+			beforeSend: function(){
+				//this_.html('<img class="uploadVK" src="/images/uploadVK.gif" />');
+			},
+			success: function(msg){
+				$('#img_block').html(msg.images);
+				$('#news_block').html(msg.news);
+				//console.log(msg);
+			}
+		});		
+		
+		
+	});
+</script>

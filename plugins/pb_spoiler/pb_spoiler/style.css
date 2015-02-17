@@ -1,0 +1,15 @@
+/* A few IE bug fixes */
+ul.pbspoiler { width: 100%;  margin: 0px; padding: 0px; }
+ul.pbspoiler li {	list-style: none !important; list-style-image: none !important; list-style-type: none !important;}
+/* Заголовок спойлера в нераскрытом виде */
+.pbspoiler span.head a:link, .pbspoiler  span.head a:visited { 
+	padding: 0px 10px 0px 15px; margin: 0px; text-decoration: none; font-weight: bold;
+	background:url(down.gif) no-repeat left; outline: none;
+}
+.pbspoiler span.head a:hover { }
+/* Заголовок спойлера в раскрытом виде */
+.pbspoiler span.selected a:link, .pbspoiler  span.selected a:visited { background:url(up.gif) no-repeat left; }
+.pbspoiler span.selected a:hover { }
+/* Оформляем содержимое спойлера */
+.pbspoiler li ul {padding: 0px; margin: 0px;}
+.pbspoiler li ul li {padding: 0px; margin: 0px;}

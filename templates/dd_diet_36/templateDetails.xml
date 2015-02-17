@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension version="2.5" client="site" type="template" method="upgrade">
+    <name>dd_diet_36</name>
+    <creationDate>2014-03-05</creationDate>
+    <version>1.0</version>
+    <author>www.diablodesign.eu</author>
+    <authorUrl>http://www.diablodesign.eu</authorUrl>
+         <description><![CDATA[	<h1>DD DIET 36</h1>
+    <span style="font-size: 15px;font-weight:bold;">
+			DD DIET 36 template ,design by DiabloDesign.
+			<span style="color:red; font-weight: bold; ">!Not for commercial!!! for commercial use, you must pay a special license (10 EURO) .</span> <br />
+			    <span style="font-size: 15px;font-weight:bold;">
+			<br />DD DIET 36 template ,design by DiabloDesign.
+			<span style="color:green; font-weight: bold; ">!Szablonu nie można używać na stonach firmowych!!! Licencja dla stron firmowych kosztuje. (40PLN Brutto) .</span> <br />				
+			<br />Visit Diablodesign.eu: <a href="http://www.diablodesign.eu" target="_blank">http://www.diablodesign.eu</a>.Email: biuro@diablodesign.eu<br />
+			</span>	
+	
+<h3>Position Modules</h3>	
+<img src="../templates/dd_diet_36/images/pozycje.jpg" align="left" hspace="10" style="padding-right:10px;"/>
+	<b>Free Joomla 2.5 i 3.2 Template developed by <a target="_blank" href="http://www.diablodesign.eu">www.diablodesign.eu</a>, released under the <a target="_blank" href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons Attribution 3.0</a>.
+	<br />Our free joomla templates may be used for both personal websites.<br />
+	<br />Copyright 2014 www.diablodesign.eu - All Rights Reserved</b>
+
+	]]>
+	
+	
+	</description>
+    <files>
+        <folder>css</folder>
+        <folder>html</folder>
+        <folder>images</folder>
+         <folder>js</folder>
+		  <folder>themes</folder>
+        <folder>library</folder>
+        <file>component.php</file>
+        <file>favicon.ico</file>
+        <file>functions.php</file>
+        <file>index.html</file>
+        <file>index.php</file>
+        <file>jquery.js</file>
+        <file>modules.js</file>
+        <file>script.js</file>
+        <file>script.responsive.js</file>
+        <file>templateDetails.xml</file>
+        <file>template_thumbnail.png</file>
+    </files>
+    <positions>
+        <position>debug</position>
+        <position>position-1</position>
+        <position>position-2</position>
+        <position>position-3</position>
+        <position>position-4</position>
+        <position>position-5</position>
+        <position>position-6</position>
+        <position>position-7</position>
+        <position>position-8</position>
+        <position>position-9</position>
+        <position>position-10</position>
+        <position>position-11</position>
+        <position>position-12</position>
+        <position>position-15</position>
+        <position>position-16</position>
+        <position>position-17</position>
+        <position>position-18</position>
+        <position>position-19</position>
+        <position>position-20</position>
+        <position>position-21</position>
+        <position>position-22</position>
+        <position>position-23</position>
+        <position>position-24</position>
+        <position>position-25</position>
+        <position>position-26</position>
+        <position>position-27</position>
+        <position>position-28</position>
+        <position>position-29</position>
+        <position>position-30</position>
+		<position>slideshow</position>
+		<position>headertext</position>
+    </positions>
+     <config>
+        <fields name="params">
+          <!--logo-->
+			 <fieldset name="logo" label="Configuration Logo / Konfiguracja logo"><field name="logo" type="media" label="Select image " description="Logo" default="templates/dd_diet_36/images/logo.png"/>
+				</fieldset>
+				
+	
+	<!--animcja-->
+				<fieldset name="animacja" label="Configuration Slideshow / Konfiguracja animacji">
+					<field type="spacer" class="text" label="&lt;b style='color:red;'&gt;Rozmiar fotografi musi wynosić 498px na 400px !&lt;/b&gt;&lt;/a&gt;" />
+					<field type="spacer" class="text" label="&lt;b style='color:green;'&gt;Size photo must be 498px to 400px! !&lt;/b&gt;&lt;/a&gt;" />
+			<field name="foto1" type="media" label="Upload foto 1" description="" default="templates/dd_diet_36/images/slideshow/1.jpg"/>
+			<field name="foto2" type="media" label="Upload foto 2" description="" default="templates/dd_diet_36/images/slideshow/2.jpg"/>
+			<field name="foto3" type="media" label="Upload foto 3" description="" default="templates/dd_diet_36/images/slideshow/3.jpg"/>
+			<field name="foto4" type="media" label="Upload foto 4" description="" default="templates/dd_diet_36/images/slideshow/4.jpg"/>
+			<field name="foto5" type="media" label="Upload foto 5" description="" default="templates/dd_diet_36/images/slideshow/5.jpg"/>
+			<field type="spacer" class="text" label="&lt;b style='color:green;'&gt;Close slideshow/zamknij animację!&lt;/b&gt;&lt;/a&gt;" />
+			<field name="slidec" type="list" default="1" label="" description="">
+			
+			<field type="spacer" class="text" label="&lt;b style='color:green;'&gt;Position module slideshow!&lt;/b&gt;&lt;/a&gt;" />
+					<option value="0">Disabled / WYLACZ</option>
+					<option value="1">Enabled / ZALACZ</option>
+				</field>
+			</fieldset>
+			
+						 <!--header info-->
+				<fieldset name="header" label="Header text information/Informacja w nagłowku">
+                 
+				  <field name="textlink" type="text" default="http://" size="50" label="Text url / Link Tekstu" description="text url"/>
+				  <field name="text" type="textarea" default="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur..." rows="8" cols="60"  label="Header Info" description="info text " />
+				  	<field type="spacer" class="text" label="&lt;b style='color:green;'&gt;close header txt / wyłącz tekst w nagłowku  !&lt;/b&gt;&lt;/a&gt;" />
+					<field type="spacer" class="text" label="&lt;b style='color:green;'&gt;position module headertext   !&lt;/b&gt;&lt;/a&gt;" />
+				  	<field name="textc" type="list" default="1" label="" description="">
+			
+		
+					<option value="0">Disabled / WYLACZ</option>
+					<option value="1">Enabled / ZALACZ</option>
+				</field>
+				  </fieldset>
+			<!--social-->
+			<fieldset name="social" label="Links to social networking sites / Ikony społecznościowe">	
+			
+			<field name="facebook" type="text" default="http://facebook.com" label="Facebok url:" description="facebok link" filter="string" />
+			<field name="fbc" type="list" default="1" label="" description="">
+					<option value="0">Disabled / WYLACZ</option>
+					<option value="1">Enabled / ZALACZ</option>
+				</field>
+			
+			
+			<field name="twitter" type="text" default="http://twiiter.com" label="Twitter url:" description="twitter link" filter="string" />
+			<field name="twc" type="list" default="1" label="" description="">
+					<option value="0">Disabled / WYLACZ</option>
+					<option value="1">Enabled / ZALACZ</option>
+				</field>
+		
+			<field name="youtube" type="text" default="http://youtube.com" label="youtube url:" description="youtube link" filter="string" />
+			<field name="ytc" type="list" default="1" label="" description="">
+					<option value="0">Disabled / WYLACZ</option>
+					<option value="1">Enabled / ZALACZ</option>
+				</field>
+		
+			</fieldset>
+			
+			
+				<!--scrool-->
+                   <fieldset name="scroll" label="Back To Top / Powrót na góre">
+                        <field name="scroll" type="text" default="Back To Top" size="50" label="Back To Top" description="Back To Top"/>
+						<field name="backc" type="list" default="1" label="" description="test">
+					<option value="0">Disabled / WYLACZ</option>
+					<option value="1">Enabled / ZALACZ</option>
+				</field>
+						</fieldset>
+						<!--footer-->
+						<fieldset name="footer" label="Footer / Konfiguracja stopki">       
+                       <field name="footer" type="text" default="Diet Magazine" size="50" label="Site name" description="footer site name"/>
+</fieldset>
+<!--Licence number-->
+						<fieldset name="license" label="License key / klucz licencji ">
+							<field type="spacer" class="text" label="&lt;b style='color:green;'&gt;Klucz licencji dostarczany jest z Fakturą VAT   !&lt;/b&gt;&lt;/a&gt;" />       
+                       <field name="license" type="text" default="License Number" size="50" label="License Number" description="License Number"/>
+</fieldset>
+
+        </fields>
+    </config>
+ 
+</extension>

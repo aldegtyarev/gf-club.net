@@ -1,0 +1,110 @@
+<!-- INCLUDE overall_header.html -->
+
+<script type="text/javascript">
+// <![CDATA[
+/* Fragment Highlight version 0.1 */
+
+//*** This JavaScript highlight code is copyright 2003 by David Dorward; http://dorward.me.uk
+//*** Modified by Nekstati @ 2009
+
+var fragHLed = '';
+
+/* Highlight link target if the visitor arrives at the page with a # */
+
+function fragHLload() {
+	fragHL(location.hash.substring(1));
+}
+
+/* Highlight link target from an onclick event after unhighlighting the old one */
+
+function fragHL(frag) {
+	if (fragHLed.length > 0 && document.getElementById(fragHLed)) {
+	document.getElementById(fragHLed).className = '';
+	}
+	if (frag.length > 0 && document.getElementById(frag)) {
+	fragHLed = frag;
+	document.getElementById(frag).className = 'fragment';
+	}
+}
+
+/* Add onclick events to all <a> with hrefs that include a "#" */
+
+function fragHLlink() {
+	if (document.getElementsByTagName) {
+	var an = document.getElementById('rules').getElementsByTagName('a');
+	for (i=0; i<an.length; i++) {
+		if (an.item(i).getAttribute('href').indexOf('#') >= 0) {
+		var fragment = an.item(i).getAttribute('href').substring(an.item(i).getAttribute('href').indexOf('#') + 1);
+			var evn = "fragHL('" + fragment + "')";
+			var fun = new Function('e', evn);
+			an.item(i).onclick = fun;
+		}
+	}
+	}
+}
+
+/* Init the script */
+
+window.onload = function() {
+	fragHLload();
+	fragHLlink();
+};
+// ]]>
+</script>
+
+<h2>{L_BOARD_RULES_HDR}</h2>
+
+<div id="rules" style="width: 100%">
+
+<div class="panel bg2" id="rulelinks" style="float: right; width: 22%">
+	<div class="inner"><span class="corners-top"><span></span></span>
+		
+		<h3>{L_BOARD_RULES_CATS}</h3><br />
+		<!-- BEGIN cat_row -->
+			<dl class="contents"<!-- IF cat_row.S_LAST_ROW --> style="border: none"<!-- ENDIF -->>
+				<dd><a href="#cat{cat_row.CAT_NUMBER}">{cat_row.CAT_NUMBER}. {cat_row.CAT_TEXT}</a></dd>
+			</dl>
+		<!-- END cat_row -->
+		
+	<span class="corners-bottom"><span></span></span></div>
+</div>
+
+<!-- BEGIN cat_row -->
+	<div class="panel <!-- IF cat_row.S_ROW_COUNT is odd -->bg2<!-- ELSE -->bg1<!-- ENDIF -->" style="margin-right: 26%">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="content">
+			<h2 id="cat{cat_row.CAT_NUMBER}"><strong>{cat_row.CAT_NUMBER}. {cat_row.CAT_TEXT}</strong></h2>
+			<!-- BEGIN rule_row -->
+				<dl class="faq">
+					<dd id="rule{cat_row.rule_row.RULE_NUMBER}"><a href="#rule{cat_row.rule_row.RULE_NUMBER}">{cat_row.rule_row.RULE_NUMBER}</a>. {cat_row.rule_row.RULE_TEXT}
+					<!-- BEGIN subrule_row -->
+						<dl class="faq1">
+							<dd id="rule{cat_row.rule_row.subrule_row.SUBRULE_NUMBER}"><a href="#rule{cat_row.rule_row.subrule_row.SUBRULE_NUMBER}">{cat_row.rule_row.subrule_row.SUBRULE_NUMBER}</a>. {cat_row.rule_row.subrule_row.SUBRULE_TEXT}
+							<!-- BEGIN subsubrule_row -->
+								<dl class="faq1">
+									<dd id="rule{cat_row.rule_row.subrule_row.subsubrule_row.SUBSUBRULE_NUMBER}"><a href="#rule{cat_row.rule_row.subrule_row.subsubrule_row.SUBSUBRULE_NUMBER}">{cat_row.rule_row.subrule_row.subsubrule_row.SUBSUBRULE_NUMBER}</a>. {cat_row.rule_row.subrule_row.subsubrule_row.SUBSUBRULE_TEXT}
+									</dd>
+								</dl>
+							<!-- END subsubrule_row -->
+							</dd>
+						</dl>
+					<!-- END subrule_row -->
+					</dd>
+				</dl>
+				<!-- IF not cat_row.rule_row.S_LAST_ROW --><span class="hr"></span><!-- ENDIF -->
+			<!-- END rule_row -->
+		</div><br />
+		
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+<!-- END cat_row -->
+
+<div class="clear"></div>
+
+</div>
+
+<br /><br />
+
+<!-- INCLUDE jumpbox.html -->
+<!-- INCLUDE overall_footer.html -->

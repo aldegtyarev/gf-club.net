@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="content">
+	<name>Content - Spoiler text</name>
+	<author>Beliyadm</author>
+	<creationDate>13 05 2009</creationDate>
+	<copyright>Copyright (C) 2005 - 2008 Open Source Matters. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@pbelkov.com</authorEmail>
+	<authorUrl>www.blog.pbelkov.com</authorUrl>
+	<version>1.0</version>
+	<description>Make show\hide spoiler content</description>
+	<files>
+		<filename plugin="pb_spoiler">pb_spoiler.php</filename>
+		<filename plugin="pb_spoiler">pb_spoiler/accordion.js</filename>
+		<filename plugin="pb_spoiler">pb_spoiler/jquery.js</filename>
+		<filename plugin="pb_spoiler">pb_spoiler/down.gif</filename>
+		<filename plugin="pb_spoiler">pb_spoiler/up.gif</filename>
+		<filename plugin="pb_spoiler">pb_spoiler/style.css</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="jsjquery" type="radio" default="1" label="Подгрузка Jquery" description="Загружать ли библиотеку Jquery?">
+					<option value="0">Нет</option>
+					<option value="1">Да</option>
+				</field>
+				<field name="jsshow" type="text" cols="25" rows="5" default="200" label="Скорость раскрытия" description="Скорость раскрытия блока (в мс)" />
+			</fieldset>
+		</fields>
+	</config>
+	<params>
+	</params>
+</extension>
