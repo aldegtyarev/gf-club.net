@@ -242,19 +242,20 @@ $(function() {
 
 
                         <?php if ($view->containsModules('position-6', 'position-8', 'position-3')) : ?>
-<div class="dd-layout-cell dd-sidebar2">
-<?php echo $view->position('position-6', 'dd-block'); ?>
-<?php echo $view->position('position-8', 'dd-block'); ?>
-<?php echo $view->position('position-3', 'dd-block'); ?>
-
-
-                        </div>
-<?php endif; ?>
+							<div class="dd-layout-cell dd-sidebar2">
+								<?php echo $view->position('position-6', 'dd-block'); ?>
+								<?php echo $view->position('position-8', 'dd-block'); ?>
+								<?php echo $view->position('position-3', 'dd-block'); ?>
+							</div>
+						<?php endif; ?>
                     </div>
                 </div>
             </div>
-<?php echo $view->positions(array('position-9' => 33, 'position-10' => 33, 'position-11' => 34), 'dd-block'); ?>
-<?php echo $view->position('position-26', 'dd-nostyle'); ?>
+            
+			<?php echo $view->positions(array('position-9' => 33, 'position-10' => 33, 'position-11' => 34), 'dd-block'); ?>
+			
+			<div class="block-position-26 clearfix"><div class="block-position-26-wr"><?php echo $view->position('position-26', 'dd-nostyle'); ?></div></div>
+			
 
 	<footer class="dd-footer">
 		<?php if ($view->containsModules('position-27')) : ?>

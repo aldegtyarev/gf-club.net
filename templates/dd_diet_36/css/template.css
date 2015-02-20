@@ -1,7 +1,9 @@
 #dd-main
 {
-  background: #262626 url('../images/page.jpeg') center center no-repeat fixed;
-  background: url('../images/pageglare.png') top center no-repeat, url('../images/page.jpeg') center center no-repeat, #262626;
+/*  background: #262626 url('../images/page.jpeg') center center no-repeat fixed;*/
+  background: #262626 url('../images/page-v4.jpg') center center no-repeat fixed;
+  /*background: url('../images/pageglare.png') top center no-repeat, url('../images/page.jpeg') center center no-repeat, #262626;*/
+  background: url('../images/pageglare.png') top center no-repeat, url('../images/page-v4.jpg') center center no-repeat, #262626;
   background-attachment: fixed, fixed, scroll !important;
   margin: 0 auto;
   font-size: 13px;
@@ -3884,3 +3886,21 @@ ul.list-striped > li:before
 }
 
   #toTop p{ padding-top:17px; font-weight:bold; color:#000;}
+
+.block-position-26 {
+	margin: 10px 0 0 0;
+	overflow: hidden;
+}
+
+.block-position-26-wr {
+	position: relative;
+	float: left;
+	left: 50%;
+}
+
+.block-position-26-wr .dd-nostyle_debug {
+	position: relative;
+	float: left;
+	right: 50%;
+	margin: 0 5px;
+}
