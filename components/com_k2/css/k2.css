@@ -1,8 +1,8 @@
 /**
- * @version		$Id: k2.css 1344 2011-11-25 16:47:03Z joomlaworks $
+ * @version		2.6.x
  * @package		K2
- * @author		JoomlaWorks http://www.joomlaworks.gr
- * @copyright	Copyright (c) 2006 - 2011 JoomlaWorks Ltd. All rights reserved.
+ * @author		JoomlaWorks http://www.joomlaworks.net
+ * @copyright	Copyright (c) 2006 - 2014 JoomlaWorks Ltd. All rights reserved.
  * @license		GNU/GPL license: http://www.gnu.org/copyleft/gpl.html
  */
 
@@ -128,7 +128,7 @@ table.csvData tr td {}
 /* --- Featured flags: the classes are repeated further below to indicate placement in the CSS structure --- */
 div.itemIsFeatured,
 div.catItemIsFeatured,
-div.userItemIsFeatured {/*background:url(../images/system/featuredItem.png) no-repeat 100% 0;*/}
+div.userItemIsFeatured {background:url(../images/system/featuredItem.png) no-repeat 100% 0;}
 
 
 
@@ -184,7 +184,6 @@ div.itemRatingBlock {padding:8px 0;}
 	div.itemRatingBlock span {display:block;float:left;font-style:normal;padding:0 4px 0 0;margin:0;color:#999;}
 
 div.itemBody {padding:8px 0;margin:0;}
-	div.itemBody img{margin:0 5px;}
 
 div.itemImageBlock {padding:8px;margin:0 0 16px 0;}
 	span.itemImage {display:block;text-align:center;margin:0 0 8px 0;}
@@ -192,7 +191,7 @@ div.itemImageBlock {padding:8px;margin:0 0 16px 0;}
 	span.itemImageCaption {color:#666;float:left;display:block;font-size:11px;}
 	span.itemImageCredits {color:#999;float:right;display:block;font-style:italic;font-size:11px;}
 
-div.itemIntroText {/*color:#444;font-size:18px;font-weight:bold;line-height:24px;padding:4px 0 12px 0;*/}
+div.itemIntroText {color:#444;font-size:18px;font-weight:bold;line-height:24px;padding:4px 0 12px 0;}
 	div.itemIntroText img {}
 
 div.itemFullText {}
@@ -210,12 +209,12 @@ div.itemExtraFields {margin:16px 0 0 0;padding:8px 0 0 0;border-top:1px dotted #
 div.itemContentFooter {display:block;text-align:right;padding:4px;margin:16px 0 4px 0;border-top:1px solid #ddd;color:#999;}
 	span.itemHits {float:left;}
 	span.itemDateModified {}
-	
+
 div.itemSocialSharing {padding:8px 0;}
 	div.itemTwitterButton {float:left;margin:2px 24px 0 0;}
 	div.itemFacebookButton {float:left;margin-right:24px;width:200px;}
 	div.itemGooglePlusOneButton {}
-	
+
 div.itemLinks {margin:16px 0;padding:0;}
 
 div.itemCategory {padding:4px;border-bottom:1px dotted #ccc;}
@@ -276,7 +275,7 @@ div.itemRelated {margin-bottom:16px;padding:0;} /* Add overflow-x:scroll; if you
 			div.itemRelImageGallery {}
 
 /* Video */
-div.itemVideoBlock {margin:0 0 16px 0;padding:16px;background:#010101 url(../images/system/videoplayer-bg.gif) repeat-x bottom;}
+div.itemVideoBlock {margin:0 0 16px 0;}
 	div.itemVideoBlock div.itemVideoEmbedded {text-align:center;} /* for embedded videos (not using AllVideos) */
 	div.itemVideoBlock span.itemVideo {display:block;overflow:hidden;}
 	div.itemVideoBlock span.itemVideoCaption {color:#eee;float:left;display:block;font-size:11px;font-weight:bold;width:60%;}
@@ -306,7 +305,7 @@ div.itemComments {background:#f7fafe;border:1px solid #ddd;padding:16px;}
 	div.itemComments ul.itemCommentsList li span.commentLink {float:right;margin-left:8px;}
 	div.itemComments ul.itemCommentsList li span.commentLink a {font-size:11px;color:#999;text-decoration:underline;}
 	div.itemComments ul.itemCommentsList li span.commentLink a:hover {font-size:11px;color:#555;text-decoration:underline;}
-	
+
 	div.itemComments ul.itemCommentsList li span.commentToolbar {display:block;clear:both;}
 	div.itemComments ul.itemCommentsList li span.commentToolbar a {font-size:11px;color:#999;text-decoration:underline;margin-right:4px;}
 	div.itemComments ul.itemCommentsList li span.commentToolbar a:hover {font-size:11px;color:#555;text-decoration:underline;}
@@ -423,8 +422,7 @@ div.catItemImageBlock {padding:8px;margin:0 0 16px 0;}
 	span.catItemImage img {border:1px solid #ccc;padding:8px;}
 
 div.catItemIntroText {font-size:inherit;font-weight:normal;line-height:inherit;padding:4px 0 12px 0;}
-	div.catItemIntroText img {margin:0 5px 0 0;}
-	div.catItemIntroText{text-align:justify;}
+	div.catItemIntroText img {}
 
 div.catItemExtraFields, div.genericItemExtraFields {margin:16px 0 0 0;padding:8px 0 0 0;border-top:1px dotted #ddd;}
 	div.catItemExtraFields h4, div.genericItemExtraFields h4 {margin:0;padding:0 0 8px 0;line-height:normal !important;}
@@ -458,7 +456,7 @@ div.catItemAttachmentsBlock {padding:4px;border-bottom:1px dotted #ccc;}
 	div.catItemAttachmentsBlock ul.catItemAttachments li span {font-size:10px;color:#999;font-weight:normal;}
 
 /* Video */
-div.catItemVideoBlock {margin:0 0 16px 0;padding:16px;background:#010101 url(../images/system/videoplayer-bg.gif) repeat-x bottom;}
+div.catItemVideoBlock {margin:0 0 16px 0;}
 	div.catItemVideoBlock div.catItemVideoEmbedded {text-align:center;} /* for embedded videos (not using AllVideos) */
 	div.catItemVideoBlock span.catItemVideo {display:block;}
 
@@ -571,7 +569,7 @@ div.tagItemImageBlock {padding:0;margin:0;float:left;}
 
 div.tagItemIntroText {font-size:inherit;font-weight:normal;line-height:inherit;padding:4px 0 12px 0;}
 	div.tagItemIntroText img {}
-	
+
 	div.tagItemExtraFields {}
 		div.tagItemExtraFields h4 {}
 		div.tagItemExtraFields ul {}
@@ -611,7 +609,7 @@ div.genericItemImageBlock {padding:0;margin:0;float:left;}
 
 div.genericItemIntroText {font-size:inherit;font-weight:normal;line-height:inherit;padding:4px 0 12px 0;}
 	div.genericItemIntroText img {}
-	
+
 	div.genericItemExtraFields {}
 		div.genericItemExtraFields h4 {}
 		div.genericItemExtraFields ul {}
@@ -628,10 +626,15 @@ div.genericItemReadMore {display:inline;}
 	div.genericItemReadMore a {}
 	div.genericItemReadMore a:hover {}
 
-/* --- Google Search --- */
-#k2Container div.gsc-branding-text {text-align:right;}
-#k2Container div.gsc-control {width:100%;}
-#k2Container div.gs-visibleUrl {display:none;}
+/* No results found message */
+div#genericItemListNothingFound {padding:40px;text-align:center;}
+	div#genericItemListNothingFound p {font-size:20px;color:#999;}
+
+/* --- Google Search (use Firebug or similar tools to inspect the generated HTML, then style accordingly --- */
+#k2GoogleSearchContainer .gsc-control {width:auto !important;}
+#k2GoogleSearchContainer .gsc-control .gsc-above-wrapper-area,
+#k2GoogleSearchContainer .gsc-control .gsc-resultsHeader,
+#k2GoogleSearchContainer .gsc-control .gsc-url-bottom {display:none !important;} /* Hide unneeded elements of the results page */
 
 
 
@@ -972,7 +975,7 @@ div.k2SearchBlock div.k2LiveSearchResults {display:none;background:#fff;position
 	div.k2SearchBlock div.k2LiveSearchResults ul.liveSearchResults li {border:none;margin:0;padding:0;}
 	div.k2SearchBlock div.k2LiveSearchResults ul.liveSearchResults li a {display:block;padding:1px 2px;border-top:1px dotted #eee;}
 	div.k2SearchBlock div.k2LiveSearchResults ul.liveSearchResults li a:hover {background:#fffff0;}
-	
+
 /* --- Tag Cloud --- */
 div.k2TagCloudBlock {padding:8px 0;}
 div.k2TagCloudBlock a {padding:4px;float:left;display:block;}

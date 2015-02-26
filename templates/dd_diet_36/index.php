@@ -109,7 +109,8 @@ $(function() {
 </head>
 <body>
 <!--License Number :<?php echo $this->params->get('license'); ?>-->
-<?php if ($backc == 1) { ?><div id="toTop"><p>^<?php echo $this->params->get('scroll'); ?></p></div><?php } ?>
+<? /*<?php if ($backc == 1) { ?><div id="toTop"><p>^<?php echo $this->params->get('scroll'); ?></p></div><?php } ?> */ ?>
+<?php if ($backc == 1) { ?><div id="toTop"></div><?php } ?>
 <div id="dd-main">
 	<header class="dd-header"><?php echo $view->position('position-30', 'dd-nostyle'); ?>
 

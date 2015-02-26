@@ -1,14 +1,14 @@
 <?php
 /**
- * @version		2.6.x
+ * @version		$Id: item_comments_form.php 1219 2011-10-18 13:04:24Z joomlaworks $
  * @package		K2
- * @author		JoomlaWorks http://www.joomlaworks.net
- * @copyright	Copyright (c) 2006 - 2014 JoomlaWorks Ltd. All rights reserved.
+ * @author		JoomlaWorks http://www.joomlaworks.gr
+ * @copyright	Copyright (c) 2006 - 2011 JoomlaWorks Ltd. All rights reserved.
  * @license		GNU/GPL license: http://www.gnu.org/copyleft/gpl.html
  */
 
 // no direct access
-defined('_JEXEC') or die;
+defined('_JEXEC') or die('Restricted access');
 
 ?>
 
@@ -24,7 +24,7 @@ defined('_JEXEC') or die;
 </p>
 <?php endif; ?>
 
-<form action="<?php echo JURI::root(true); ?>/index.php" method="post" id="comment-form" class="form-validate">
+<form action="<?php echo JRoute::_('index.php'); ?>" method="post" id="comment-form" class="form-validate">
 	<label class="formComment" for="commentText"><?php echo JText::_('K2_MESSAGE'); ?> *</label>
 	<textarea rows="20" cols="10" class="inputbox" onblur="if(this.value=='') this.value='<?php echo JText::_('K2_ENTER_YOUR_MESSAGE_HERE'); ?>';" onfocus="if(this.value=='<?php echo JText::_('K2_ENTER_YOUR_MESSAGE_HERE'); ?>') this.value='';" name="commentText" id="commentText"><?php echo JText::_('K2_ENTER_YOUR_MESSAGE_HERE'); ?></textarea>
 
@@ -37,7 +37,7 @@ defined('_JEXEC') or die;
 	<label class="formUrl" for="commentURL"><?php echo JText::_('K2_WEBSITE_URL'); ?></label>
 	<input class="inputbox" type="text" name="commentURL" id="commentURL" value="<?php echo JText::_('K2_ENTER_YOUR_SITE_URL'); ?>"  onblur="if(this.value=='') this.value='<?php echo JText::_('K2_ENTER_YOUR_SITE_URL'); ?>';" onfocus="if(this.value=='<?php echo JText::_('K2_ENTER_YOUR_SITE_URL'); ?>') this.value='';" />
 
-	<?php if($this->params->get('recaptcha') && ($this->user->guest || $this->params->get('recaptchaForRegistered', 1))): ?>
+	<?php if($this->params->get('recaptcha') && $this->user->guest): ?>
 	<label class="formRecaptcha"><?php echo JText::_('K2_ENTER_THE_TWO_WORDS_YOU_SEE_BELOW'); ?></label>
 	<div id="recaptcha"></div>
 	<?php endif; ?>

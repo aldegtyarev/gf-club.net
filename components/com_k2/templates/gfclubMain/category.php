@@ -1,14 +1,14 @@
 <?php
 /**
- * @version		2.6.x
+ * @version		$Id: category.php 1273 2011-10-27 16:12:32Z lefteris.kavadas $
  * @package		K2
- * @author		JoomlaWorks http://www.joomlaworks.net
- * @copyright	Copyright (c) 2006 - 2014 JoomlaWorks Ltd. All rights reserved.
+ * @author		JoomlaWorks http://www.joomlaworks.gr
+ * @copyright	Copyright (c) 2006 - 2011 JoomlaWorks Ltd. All rights reserved.
  * @license		GNU/GPL license: http://www.gnu.org/copyleft/gpl.html
  */
 
 // no direct access
-defined('_JEXEC') or die;
+defined('_JEXEC') or die('Restricted access');
 
 ?>
 
@@ -80,7 +80,7 @@ defined('_JEXEC') or die;
 
 			<?php
 			// Define a CSS class for the last container on each row
-			if( (($key+1)%($this->params->get('subCatColumns'))==0))
+			if( (($key+1)%($this->params->get('subCatColumns'))==0) || count($this->subCategories)<$this->params->get('subCatColumns') )
 				$lastContainer= ' subCategoryContainerLast';
 			else
 				$lastContainer='';
@@ -251,7 +251,7 @@ defined('_JEXEC') or die;
 	</div>
 
 	<!-- Pagination -->
-	<?php if($this->pagination->getPagesLinks()): ?>
+	<?php if(count($this->pagination->getPagesLinks())): ?>
 	<div class="k2Pagination">
 		<?php if($this->params->get('catPagination')) echo $this->pagination->getPagesLinks(); ?>
 		<div class="clr"></div>

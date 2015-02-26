@@ -16,7 +16,8 @@ K2HelperUtilities::setDefaultImage($this->item, 'itemlist', $this->params);
 ?>
 
 <!-- Start K2 Item Layout -->
-<div class="catItemView group<?php echo ucfirst($this->item->itemGroup); ?><?php echo ($this->item->featured) ? ' catItemIsFeatured' : ''; ?><?php if($this->item->params->get('pageclass_sfx')) echo ' '.$this->item->params->get('pageclass_sfx'); ?>">
+<? /* <div class="catItemView group<?php echo ucfirst($this->item->itemGroup); ?><?php echo ($this->item->featured) ? ' catItemIsFeatured' : ''; ?><?php if($this->item->params->get('pageclass_sfx')) echo ' '.$this->item->params->get('pageclass_sfx'); ?>"> */?>
+<div class="catItemView group<?php echo ucfirst($this->item->itemGroup); ?><?php if($this->item->params->get('pageclass_sfx')) echo ' '.$this->item->params->get('pageclass_sfx'); ?>">
 
 	<!-- Plugins: BeforeDisplay -->
 	<?php echo $this->item->event->BeforeDisplay; ?>
@@ -219,13 +220,10 @@ K2HelperUtilities::setDefaultImage($this->item, 'itemlist', $this->params);
   <?php if($this->item->params->get('catItemVideo') && !empty($this->item->video)): ?>
   <!-- Item video -->
   <div class="catItemVideoBlock">
-  	<h3><?php echo JText::_('K2_RELATED_VIDEO'); ?></h3>
 		<?php if($this->item->videoType=='embedded'): ?>
-		<div class="catItemVideoEmbedded">
-			<?php echo $this->item->video; ?>
-		</div>
+			<div class="catItemVideoEmbedded"><?php echo $this->item->video; ?></div>
 		<?php else: ?>
-		<span class="catItemVideo"><?php echo $this->item->video; ?></span>
+			<span class="catItemVideo"><?php echo $this->item->video; ?></span>
 		<?php endif; ?>
   </div>
   <?php endif; ?>

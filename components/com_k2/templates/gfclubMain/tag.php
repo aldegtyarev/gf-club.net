@@ -1,14 +1,14 @@
 <?php
 /**
- * @version		2.6.x
+ * @version		$Id: tag.php 1286 2011-10-27 17:37:15Z joomlaworks $
  * @package		K2
- * @author		JoomlaWorks http://www.joomlaworks.net
- * @copyright	Copyright (c) 2006 - 2014 JoomlaWorks Ltd. All rights reserved.
+ * @author		JoomlaWorks http://www.joomlaworks.gr
+ * @copyright	Copyright (c) 2006 - 2011 JoomlaWorks Ltd. All rights reserved.
  * @license		GNU/GPL license: http://www.gnu.org/copyleft/gpl.html
  */
 
 // no direct access
-defined('_JEXEC') or die;
+defined('_JEXEC') or die('Restricted access');
 
 ?>
 
@@ -92,14 +92,10 @@ defined('_JEXEC') or die;
 		  	<h4><?php echo JText::_('K2_ADDITIONAL_INFO'); ?></h4>
 		  	<ul>
 				<?php foreach ($item->extra_fields as $key=>$extraField): ?>
-				<?php if($extraField->value != ''): ?>
+				<?php if($extraField->value): ?>
 				<li class="<?php echo ($key%2) ? "odd" : "even"; ?> type<?php echo ucfirst($extraField->type); ?> group<?php echo $extraField->group; ?>">
-					<?php if($extraField->type == 'header'): ?>
-					<h4 class="tagItemExtraFieldsHeader"><?php echo $extraField->name; ?></h4>
-					<?php else: ?>
 					<span class="tagItemExtraFieldsLabel"><?php echo $extraField->name; ?></span>
-					<span class="tagItemExtraFieldsValue"><?php echo $extraField->value; ?></span>
-					<?php endif; ?>		
+					<span class="tagItemExtraFieldsValue"><?php echo $extraField->value; ?></span>		
 				</li>
 				<?php endif; ?>
 				<?php endforeach; ?>

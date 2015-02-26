@@ -1,17 +1,17 @@
 <?php
 /**
- * @version		2.6.x
+ * @version		$Id: user.php 1344 2011-11-25 16:47:03Z joomlaworks $
  * @package		K2
- * @author		JoomlaWorks http://www.joomlaworks.net
- * @copyright	Copyright (c) 2006 - 2014 JoomlaWorks Ltd. All rights reserved.
+ * @author		JoomlaWorks http://www.joomlaworks.gr
+ * @copyright	Copyright (c) 2006 - 2011 JoomlaWorks Ltd. All rights reserved.
  * @license		GNU/GPL license: http://www.gnu.org/copyleft/gpl.html
  */
 
 // no direct access
-defined('_JEXEC') or die;
+defined('_JEXEC') or die('Restricted access');
 
 // Get user stuff (do not change)
-$user = JFactory::getUser();
+$user = &JFactory::getUser();
 
 ?>
 
@@ -49,7 +49,7 @@ $user = JFactory::getUser();
 		<?php endif; ?>
 	
 		<?php if ($this->params->get('userImage') && !empty($this->user->avatar)): ?>
-		<img src="<?php echo $this->user->avatar; ?>" alt="<?php echo htmlspecialchars($this->user->name, ENT_QUOTES, 'UTF-8'); ?>" style="width:<?php echo $this->params->get('userImageWidth'); ?>px; height:auto;" />
+		<img src="<?php echo $this->user->avatar; ?>" alt="<?php echo $this->user->name; ?>" style="width:<?php echo $this->params->get('userImageWidth'); ?>px; height:auto;" />
 		<?php endif; ?>
 		
 		<?php if ($this->params->get('userName')): ?>
@@ -101,14 +101,14 @@ $user = JFactory::getUser();
 			<?php echo $item->event->K2BeforeDisplay; ?>
 		
 			<div class="userItemHeader">			
-				<?php if($this->params->get('userItemDateCreated')): ?>
+				<?php if($item->params->get('userItemDateCreated')): ?>
 				<!-- Date created -->
 				<span class="userItemDateCreated">
 					<?php echo JHTML::_('date', $item->created , JText::_('K2_DATE_FORMAT_LC2')); ?>
 				</span>
 				<?php endif; ?>
-				
-			  <?php if($this->params->get('userItemTitle')): ?>
+							
+			  <?php if($item->params->get('userItemTitle')): ?>
 			  <!-- Item title -->
 			  <h3 class="userItemTitle">
 					<?php if(isset($item->editLink)): ?>
@@ -120,7 +120,7 @@ $user = JFactory::getUser();
 					</span>
 					<?php endif; ?>
 
-			  	<?php if ($this->params->get('userItemTitleLinked') && $item->published): ?>
+			  	<?php if ($item->params->get('userItemTitleLinked') && $item->published): ?>
 					<a href="<?php echo $item->link; ?>">
 			  		<?php echo $item->title; ?>
 			  	</a>
@@ -152,19 +152,19 @@ $user = JFactory::getUser();
 			  <!-- K2 Plugins: K2BeforeDisplayContent -->
 			  <?php echo $item->event->K2BeforeDisplayContent; ?>
 		
-			  <?php if($this->params->get('userItemImage') && !empty($item->imageGeneric)): ?>
+			  <?php if($item->params->get('userItemImage') && !empty($item->imageGeneric)): ?>
 			  <!-- Item Image -->
 			  <div class="userItemImageBlock">
 				  <span class="userItemImage">
 				    <a href="<?php echo $item->link; ?>" title="<?php if(!empty($item->image_caption)) echo K2HelperUtilities::cleanHtml($item->image_caption); else echo K2HelperUtilities::cleanHtml($item->title); ?>">
-				    	<img src="<?php echo $item->imageGeneric; ?>" alt="<?php if(!empty($item->image_caption)) echo K2HelperUtilities::cleanHtml($item->image_caption); else echo K2HelperUtilities::cleanHtml($item->title); ?>" style="width:<?php echo $this->params->get('itemImageGeneric'); ?>px; height:auto;" />
+				    	<img src="<?php echo $item->imageGeneric; ?>" alt="<?php if(!empty($item->image_caption)) echo K2HelperUtilities::cleanHtml($item->image_caption); else echo K2HelperUtilities::cleanHtml($item->title); ?>" style="width:<?php echo $item->params->get('itemImageGeneric'); ?>px; height:auto;" />
 				    </a>
 				  </span>
 				  <div class="clr"></div>
 			  </div>
 			  <?php endif; ?>
 			  
-			  <?php if($this->params->get('userItemIntroText')): ?>
+			  <?php if($item->params->get('userItemIntroText')): ?>
 			  <!-- Item introtext -->
 			  <div class="userItemIntroText">
 			  	<?php echo $item->introtext; ?>
@@ -182,10 +182,10 @@ $user = JFactory::getUser();
 			  <div class="clr"></div>
 		  </div>
 		
-		  <?php if($this->params->get('userItemCategory') || $this->params->get('userItemTags')): ?>
+		  <?php if($item->params->get('userItemCategory') || $item->params->get('userItemTags')): ?>
 		  <div class="userItemLinks">
 
-				<?php if($this->params->get('userItemCategory')): ?>
+				<?php if($item->params->get('userItemCategory')): ?>
 				<!-- Item category name -->
 				<div class="userItemCategory">
 					<span><?php echo JText::_('K2_PUBLISHED_IN'); ?></span>
@@ -193,7 +193,7 @@ $user = JFactory::getUser();
 				</div>
 				<?php endif; ?>
 				
-			  <?php if($this->params->get('userItemTags') && isset($item->tags)): ?>
+			  <?php if($item->params->get('userItemTags') && count($item->tags)): ?>
 			  <!-- Item tags -->
 			  <div class="userItemTagsBlock">
 				  <span><?php echo JText::_('K2_TAGGED_UNDER'); ?></span>
@@ -212,7 +212,7 @@ $user = JFactory::getUser();
 		
 			<div class="clr"></div>
 
-			<?php if($this->params->get('userItemCommentsAnchor') && ( ($this->params->get('comments') == '2' && !$this->user->guest) || ($this->params->get('comments') == '1')) ): ?>
+			<?php if($item->params->get('userItemCommentsAnchor') && ( ($item->params->get('comments') == '2' && !$this->user->guest) || ($item->params->get('comments') == '1')) ): ?>
 			<!-- Anchor link to comments below -->
 			<div class="userItemCommentsLink">
 				<?php if(!empty($item->event->K2CommentsCounter)): ?>
@@ -232,7 +232,7 @@ $user = JFactory::getUser();
 			</div>
 			<?php endif; ?>
 		  
-			<?php if ($this->params->get('userItemReadMore')): ?>
+			<?php if ($item->params->get('userItemReadMore')): ?>
 			<!-- Item "read more..." link -->
 			<div class="userItemReadMore">
 				<a class="k2ReadMore" href="<?php echo $item->link; ?>">

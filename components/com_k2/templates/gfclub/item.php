@@ -22,7 +22,8 @@ defined('_JEXEC') or die('Restricted access');
 <!-- Start K2 Item Layout -->
 <span id="startOfPageId<?php echo JRequest::getInt('id'); ?>"></span>
 
-<div id="k2Container" class="itemView<?php echo ($this->item->featured) ? ' itemIsFeatured' : ''; ?><?php if($this->item->params->get('pageclass_sfx')) echo ' '.$this->item->params->get('pageclass_sfx'); ?>">
+<? /*<div id="k2Container" class="itemView<?php echo ($this->item->featured) ? ' itemIsFeatured' : ''; ?><?php if($this->item->params->get('pageclass_sfx')) echo ' '.$this->item->params->get('pageclass_sfx'); ?>">*/ ?>
+<div id="k2Container" class="itemView<?php if($this->item->params->get('pageclass_sfx')) echo ' '.$this->item->params->get('pageclass_sfx'); ?>">
 
 	<!-- Plugins: BeforeDisplay -->
 	<?php echo $this->item->event->BeforeDisplay; ?>
@@ -507,8 +508,6 @@ defined('_JEXEC') or die('Restricted access');
   <a name="itemVideoAnchor" id="itemVideoAnchor"></a>
 
   <div class="itemVideoBlock">
-  	<h3><?php echo JText::_('K2_MEDIA'); ?></h3>
-
 		<?php if($this->item->videoType=='embedded'): ?>
 		<div class="itemVideoEmbedded">
 			<?php echo $this->item->video; ?>

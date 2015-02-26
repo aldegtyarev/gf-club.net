@@ -1,14 +1,14 @@
 <?php
 /**
- * @version		2.6.x
+ * @version		$Id: category_item.php 1251 2011-10-19 17:50:13Z joomlaworks $
  * @package		K2
- * @author		JoomlaWorks http://www.joomlaworks.net
- * @copyright	Copyright (c) 2006 - 2014 JoomlaWorks Ltd. All rights reserved.
+ * @author		JoomlaWorks http://www.joomlaworks.gr
+ * @copyright	Copyright (c) 2006 - 2011 JoomlaWorks Ltd. All rights reserved.
  * @license		GNU/GPL license: http://www.gnu.org/copyleft/gpl.html
  */
 
 // no direct access
-defined('_JEXEC') or die;
+defined('_JEXEC') or die('Restricted access');
 
 // Define default image size (do not change)
 K2HelperUtilities::setDefaultImage($this->item, 'itemlist', $this->params);
@@ -66,12 +66,7 @@ K2HelperUtilities::setDefaultImage($this->item, 'itemlist', $this->params);
 		<?php if($this->item->params->get('catItemAuthor')): ?>
 		<!-- Item Author -->
 		<span class="catItemAuthor">
-			<?php echo K2HelperUtilities::writtenBy($this->item->author->profile->gender); ?> 
-			<?php if(isset($this->item->author->link) && $this->item->author->link): ?>
-			<a rel="author" href="<?php echo $this->item->author->link; ?>"><?php echo $this->item->author->name; ?></a>
-			<?php else: ?>
-			<?php echo $this->item->author->name; ?>
-			<?php endif; ?>
+			<?php echo K2HelperUtilities::writtenBy($this->item->author->profile->gender); ?> <a rel="author" href="<?php echo $this->item->author->link; ?>"><?php echo $this->item->author->name; ?></a>
 		</span>
 		<?php endif; ?>
   </div>
@@ -89,11 +84,11 @@ K2HelperUtilities::setDefaultImage($this->item, 'itemlist', $this->params);
 		<div class="itemRatingForm">
 			<ul class="itemRatingList">
 				<li class="itemCurrentRating" id="itemCurrentRating<?php echo $this->item->id; ?>" style="width:<?php echo $this->item->votingPercentage; ?>%;"></li>
-				<li><a href="#" data-id="<?php echo $this->item->id; ?>" title="<?php echo JText::_('K2_1_STAR_OUT_OF_5'); ?>" class="one-star">1</a></li>
-				<li><a href="#" data-id="<?php echo $this->item->id; ?>" title="<?php echo JText::_('K2_2_STARS_OUT_OF_5'); ?>" class="two-stars">2</a></li>
-				<li><a href="#" data-id="<?php echo $this->item->id; ?>" title="<?php echo JText::_('K2_3_STARS_OUT_OF_5'); ?>" class="three-stars">3</a></li>
-				<li><a href="#" data-id="<?php echo $this->item->id; ?>" title="<?php echo JText::_('K2_4_STARS_OUT_OF_5'); ?>" class="four-stars">4</a></li>
-				<li><a href="#" data-id="<?php echo $this->item->id; ?>" title="<?php echo JText::_('K2_5_STARS_OUT_OF_5'); ?>" class="five-stars">5</a></li>
+				<li><a href="#" rel="<?php echo $this->item->id; ?>" title="<?php echo JText::_('K2_1_STAR_OUT_OF_5'); ?>" class="one-star">1</a></li>
+				<li><a href="#" rel="<?php echo $this->item->id; ?>" title="<?php echo JText::_('K2_2_STARS_OUT_OF_5'); ?>" class="two-stars">2</a></li>
+				<li><a href="#" rel="<?php echo $this->item->id; ?>" title="<?php echo JText::_('K2_3_STARS_OUT_OF_5'); ?>" class="three-stars">3</a></li>
+				<li><a href="#" rel="<?php echo $this->item->id; ?>" title="<?php echo JText::_('K2_4_STARS_OUT_OF_5'); ?>" class="four-stars">4</a></li>
+				<li><a href="#" rel="<?php echo $this->item->id; ?>" title="<?php echo JText::_('K2_5_STARS_OUT_OF_5'); ?>" class="five-stars">5</a></li>
 			</ul>
 			<div id="itemRatingLog<?php echo $this->item->id; ?>" class="itemRatingLog"><?php echo $this->item->numOfvotes; ?></div>
 			<div class="clr"></div>
@@ -137,14 +132,10 @@ K2HelperUtilities::setDefaultImage($this->item, 'itemlist', $this->params);
 	  	<h4><?php echo JText::_('K2_ADDITIONAL_INFO'); ?></h4>
 	  	<ul>
 			<?php foreach ($this->item->extra_fields as $key=>$extraField): ?>
-			<?php if($extraField->value != ''): ?>
+			<?php if($extraField->value): ?>
 			<li class="<?php echo ($key%2) ? "odd" : "even"; ?> type<?php echo ucfirst($extraField->type); ?> group<?php echo $extraField->group; ?>">
-				<?php if($extraField->type == 'header'): ?>
-				<h4 class="catItemExtraFieldsHeader"><?php echo $extraField->name; ?></h4>
-				<?php else: ?>
 				<span class="catItemExtraFieldsLabel"><?php echo $extraField->name; ?></span>
 				<span class="catItemExtraFieldsValue"><?php echo $extraField->value; ?></span>
-				<?php endif; ?>
 			</li>
 			<?php endif; ?>
 			<?php endforeach; ?>
