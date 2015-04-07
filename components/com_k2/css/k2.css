@@ -180,7 +180,7 @@ div.itemToolbar {padding:2px 0;margin:16px 0 0 0;border-top:1px dotted #ccc;bord
 	div.itemToolbar ul li a#fontDecrease span,
 	div.itemToolbar ul li a#fontIncrease span {display:none;}
 
-div.itemRatingBlock {padding:8px 0;}
+div.itemRatingBlock {padding:8px 0;line-height: 24px;}
 	div.itemRatingBlock span {display:block;float:left;font-style:normal;padding:0 4px 0 0;margin:0;color:#999;}
 
 div.itemBody {padding:8px 0;margin:0;}
@@ -191,10 +191,12 @@ div.itemImageBlock {padding:8px;margin:0 0 16px 0;}
 	span.itemImageCaption {color:#666;float:left;display:block;font-size:11px;}
 	span.itemImageCredits {color:#999;float:right;display:block;font-style:italic;font-size:11px;}
 
-div.itemIntroText {color:#444;font-size:18px;font-weight:bold;line-height:24px;padding:4px 0 12px 0;}
+div.itemIntroText {}
 	div.itemIntroText img {}
 
-div.itemFullText {}
+div.itemFullText {
+	clear: both;
+}
 	div.itemFullText h3 {margin:0;padding:16px 0 4px 0;}
 	div.itemFullText p {}
 	div.itemFullText img {}

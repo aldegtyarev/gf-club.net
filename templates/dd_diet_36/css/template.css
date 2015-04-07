@@ -51,13 +51,23 @@ h1, h2, h3, h4, h5, h6, p, a, ul, ol, li
   height: 22px;
 }
 
-.dd-postcontent, .dd-postheadericons, .dd-postfootericons, .dd-blockcontent, ul.dd-vmenu a
-{
+.dd-postcontent h1, 
+.dd-postheadericons, 
+.dd-postfootericons, 
+.dd-blockcontent, 
+ul.dd-vmenu a {
   text-align: left;
 }
 
-.dd-postcontent, .dd-postcontent li, .dd-postcontent table, .dd-postcontent a, .dd-postcontent a:link, .dd-postcontent a:visited, .dd-postcontent a.visited, .dd-postcontent a:hover, .dd-postcontent a.hovered
-{
+.dd-postcontent, 
+.dd-postcontent li, 
+.dd-postcontent table, 
+.dd-postcontent a, 
+.dd-postcontent a:link, 
+.dd-postcontent a:visited, 
+.dd-postcontent a.visited, 
+.dd-postcontent a:hover, 
+.dd-postcontent a.hovered {
   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
   text-align: justify;
 }
@@ -3916,4 +3926,28 @@ ul.list-striped > li:before
 	float: left;
 	right: 50%;
 	margin: 0 5px;
+}
+
+.dd-postcontent .catItemTags > li::before,
+.dd-post .catItemTags > li::before,
+.dd-postcontent .itemRatingList > li:before, 
+.dd-post .itemRatingList > li:before {
+	display: none;
+}
+
+.k2ItemsBlock .odd,
+.k2ItemsBlock .even {
+	background: none;
+}
+
+.catItemIntroText img,
+.image-left {
+	margin-right: 5px;
+}
+.image-right {
+	margin-left: 5px;
+}
+
+.dd-postcontent ul.itemRatingList {
+	margin: 0;
 }
